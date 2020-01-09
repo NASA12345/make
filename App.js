@@ -3,39 +3,43 @@ const express = require('express');
 const PORT = 3000;
 const app = express();
 
-var product = require('./src/data/products.json');
-var category = require('./src/data/categories.json');
+// Import dataService.js file.
+const dataService = require('./dataService');
 
-
-app.get("/products/all", (req, res) => {
-
-    // STEP 4. Combine category and product details, then send as JSON.
-
-    var combined = Object.assign({}, category, product);
-    res.json({allProducts : combined});
+// Send products and categories combined.
+app.get('/products/all', (req, res) => {
+  var combinedData = dataService.getCombinedProductMap();
+  let all = JSON.parse(JSON.stringify([...combinedData]));
+  res.json({all});
 });
 
-app.get("/product/:id", (req,res) => {
-
-    // STEP 5. Loop through products. If id matches, send product details as JSON.
-
-    for (food in product.products) {
-        if (product.products[food].id == req.params.id) {
-            var productById = product.products[food];
-        };
-    };
+// Get values for which product ID is a key.
+app.get('/product/:id', (req, res) => {
+  var productData = dataService.getProducts();
+  var productById = productData.get(req.params.id);
+  // Safety check if ID entered is valid
+  if (!productById) {
+    res.send('Invalid product ID');
+    return;
+  } else {
     res.json({productById});
+  }
 });
 
-app.get("/category/:ctyId", (req,res) => {
-
-    // STEP 6. Loop through products. If categoryId matches, add product to array. Send array as JSON.
-
-    var productsInCategory = [];
-    for (food in product.products) {
-        if (product.products[food].categoryId == req.params.ctyId) {
-            productsInCategory.push(product.products[food]);
-        };
-    };
+// Get values for which category ID is a key.
+app.get('/category/:ctyId', (req, res) => {
+  var categoryData = dataService.getCategories();
+  var productsInCategory = categoryData.get(req.params.ctyId);
+  // Safety check if category ID entered is valid
+  if (!productsInCategory) {
+    res.send('Invalid category ID');
+    return;
+  } else {
     res.json({productsInCategory});
+  }
+});
+
+// Listen to requests.
+app.listen(PORT, () => {
+  console.log(`Server is listening on port: ${PORT}`);
 });
