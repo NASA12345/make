@@ -1,0 +1,16 @@
+{
+    "categories": [{
+        "id" : "cty01",
+        "categoryName" : "Fruits"
+      }, {
+         "id" : "cty02",
+         "categoryName" : "Pulses"
+      }, {
+          "id" : "cty03",
+          "categoryName" : "Vegetables"
+      }, {
+          "id" : "cty04",
+          "categoryName" : "Diary products"
+      }
+      ]
+  }

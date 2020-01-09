@@ -1,0 +1,88 @@
+{
+    "products": [{
+        "id" : "P001",
+        "categoryId" : "cty01",
+        "name" : "Pine Apple",
+        "unit" : "Kg",
+        "pricePerUnit" : 1.2,
+        "stocks" : 10
+}, {
+        "id" : "P002",
+        "categoryId" : "cty01",
+        "name" : "Grapes",
+        "unit" : "Kg",
+        "pricePerUnit" : 1.5,
+        "stocks" : 13
+}, {
+        "id" : "P003",
+        "categoryId" : "cty01",
+        "name" : "Banana",
+        "unit" : "Kg",
+        "pricePerUnit" : 1.0,
+        "stocks" : 11
+}, {
+        "id" : "P004",
+        "categoryId" : "cty02",
+        "name" : "Gram",
+        "unit" : "Kg",
+        "pricePerUnit" : 1.7,
+        "stocks" : 18
+}, {
+        "id" : "P005",
+        "categoryId" : "cty02",
+        "name" : "Peas",
+        "unit" : "Kg",
+        "pricePerUnit" : 1.6,
+        "stocks" : 17
+}, {
+        "id" : "P006",
+        "categoryId" : "cty02",
+        "name" : "Beans",
+        "unit" : "Kg",
+        "pricePerUnit" : 1.5,
+        "stocks" : 20
+}, {
+        "id" : "P007",
+        "categoryId" : "cty03",
+        "name" : "Brinjal",
+        "unit" : "Kg",
+        "pricePerUnit" : 1.9,
+        "stocks" : 11
+}, {
+        "id" : "P008",
+        "categoryId" : "cty03",
+        "name" : "Cauliflower",
+        "unit" : "Kg",
+        "pricePerUnit" : 2.0,
+        "stocks" : 23
+}, {
+        "id" : "P009",
+        "categoryId" : "cty03",
+        "name" : "Tomato",
+        "unit" : "Kg",
+        "pricePerUnit" : 2.4,
+        "stocks" : 18
+}, {
+        "id" : "P0010",
+        "categoryId" : "cty04",
+        "name" : "Milk",
+        "unit" : "Litre",
+        "pricePerUnit" : 3.0,
+        "stocks" : 25
+}, {
+        "id" : "P0011",
+        "categoryId" : "cty04",
+        "name" : "Ghee",
+        "unit" : "Kg",
+        "pricePerUnit" : 5.6,
+        "stocks" : 19
+}, {
+        "id" : "P0012",
+        "categoryId" : "cty04",
+        "name" : "Lassi",
+        "unit" : "Litre",
+        "pricePerUnit" : 1.2,
+        "stocks" : 17
+      }
+      ]
+    }
